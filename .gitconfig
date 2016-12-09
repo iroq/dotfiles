@@ -1,0 +1,10 @@
+[user]
+	email = michaelszewczak@gmail.com
+	name = Michal Szewczak
+[credential]
+[push]
+	default = current
+[credential]
+	helper = store
+[merge]
+	tool = vimdiff
