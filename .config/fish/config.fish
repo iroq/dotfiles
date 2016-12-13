@@ -5,7 +5,7 @@ if status --is-login
     end
 end
 source ~/.asdf/asdf.fish
-set -x CHANGELOG_GITHUB_TOKEN "e6ae2965e587666c1cc4d61b071da21ac426a24d"
+set -x CHANGELOG_GITHUB_TOKEN (cat $HOME/github.token)
 set -x TERM "xterm-256color"
 
 # Pruning local git branches that were merged into master alredy
