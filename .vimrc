@@ -17,6 +17,7 @@ Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'joukevandermaas/vim-ember-hbs'
 
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,6 +45,7 @@ set expandtab
 set shiftwidth=4
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
+autocmd FileType handlebars setlocal shiftwidth=2 tabstop=2
 filetype plugin indent on
 
 " Syntastic
