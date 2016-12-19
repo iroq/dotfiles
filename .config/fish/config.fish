@@ -14,3 +14,8 @@ alias gbprune="git branch --merged master | grep -v 'master\$' | xargs git branc
 # Alias config
 
 alias config='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+
+# autostart tmux
+#if which tmux > /dev/null; and not set -q TMUX
+# exec tmux new-session -A -s main
+#end
