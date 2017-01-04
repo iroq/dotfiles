@@ -77,7 +77,7 @@ set colorcolumn=80
 set t_Co=256
 
 " Copypaste with X clipboard
-set clipboard=unnamedplus
+set clipboard=unnamedplus,unnamed,autoselect
 
 " Line numbers
 set number

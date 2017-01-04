@@ -4,7 +4,9 @@ if status --is-login
         exec startx
     end
 end
-source ~/.asdf/asdf.fish
+if test -e $HOME/.asdf
+    source ~/.asdf/asdf.fish
+end
 set -x CHANGELOG_GITHUB_TOKEN (cat $HOME/.keys/github.token)
 set -x TERM "xterm-256color"
 
