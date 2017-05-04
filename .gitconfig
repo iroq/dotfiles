@@ -7,6 +7,11 @@
 [credential]
 	helper = store
 [merge]
-	tool = vimdiff
+	tool = code
 [core]
 	editor = /usr/bin/vim
+[mergetool "code"]
+	cmd = "code "
+	trustExitCode = true
+[mergetool]
+	keepBackup = false

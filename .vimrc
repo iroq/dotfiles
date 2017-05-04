@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -10,7 +11,7 @@ call vundle#begin()
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-colorscheme-switcher'
@@ -18,6 +19,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'joukevandermaas/vim-ember-hbs'
+Plugin 'tpope/vim-sleuth'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -70,6 +73,9 @@ highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
 
+" Gitgutter
+let g:gitgutter_sign_column_always = 1
+
 " Columnt limit
 set colorcolumn=80
 
@@ -87,3 +93,26 @@ set updatetime=100
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1
+
+" Fix backspace
+set backspace=indent,eol,start
+
+" Use Ag in ctrlp
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
+colorscheme Benokai
+
+" Disable arrows because this is vi
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
